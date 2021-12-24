@@ -1,0 +1,24 @@
+﻿<catel:Window x:Class="MathDemos.Views.AddOutlierDetectView"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+              xmlns:catel="http://schemas.catelproject.com" 
+              Title="add outlier detector"
+              mc:Ignorable="d"
+              Height="500"
+              Width="400">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row ="0" Content="Start outlier detection demo" Command="{Binding AddOutlierDetectorCommand}"/>
+        <TextBlock Grid.Row="1" Text="{Binding Title}" />
+        <TextBlock Grid.Row="2" Text="Here goes your real content" />
+    </Grid>
+    
+</catel:Window>

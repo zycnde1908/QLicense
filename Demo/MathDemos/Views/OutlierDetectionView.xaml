@@ -1,0 +1,25 @@
+﻿<catel:UserControl x:Class="MathDemos.Views.OutlierDetectionView"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:catel="http://schemas.catelproject.com"
+                   xmlns:oxy="http://oxyplot.org/wpf"
+                   Width="800"
+                   Height="600"
+                   >
+
+    <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*"  />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="GenerateRawDataButton" Grid.Row="0" HorizontalAlignment="Left" Width="120" Content="Data Generate"
+                Command="{Binding GenerateRawDataCommand}" />
+      
+        <oxy:PlotView Grid.Row="2" Model="{Binding RawDataPlotModel}" HorizontalAlignment="Stretch" Width="700" Height="400"
+                      VerticalAlignment="Stretch"/>
+
+    </Grid>
+    
+</catel:UserControl>

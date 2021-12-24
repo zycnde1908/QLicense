@@ -1,0 +1,34 @@
+﻿<catel:UserControl x:Class="MathDemos.Views.ModbusDemoView"
+                   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                   xmlns:catel="http://schemas.catelproject.com"
+                   Width="1500"
+                   Height="600">
+
+    <Grid Background="GhostWhite">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*"  />
+        </Grid.RowDefinitions>
+
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Modbus Slave" />
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="IP Address" />
+        
+        <!-- TODO  ip port  connect, disconnect -->
+        <Button Grid.Row="2" Grid.Column="0" Content="Start Modbus Slave"  Command="{Binding StartModbusSlaveCommand}" />
+        <TextBox  Grid.Row="3" Grid.Column="0" x:Name="DebugTextBlock"  Text="{Binding ModbusSlaveDebugString}" TextWrapping="Wrap"/>
+
+        <Label Grid.Row="0" Grid.Column="1" Content="Modbus Master" />
+        <!-- TODO  ip port  connect, disconnect -->
+        <Button Grid.Row="2" Grid.Column="1" Content="Start Modbus Master"  Command="{Binding StartModbusMasterCommand}" />
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="DebugMasterTextBox" Text="{Binding ModbusMasterDebugString}" TextWrapping="Wrap" />
+    </Grid>
+
+</catel:UserControl>
